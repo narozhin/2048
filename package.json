@@ -1,0 +1,17 @@
+{
+  "name": "2048",
+  "version": "0.0.1",
+  "description": "Simple 2048",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "n.a.rozhin",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-live-server": "0.0.30",
+    "gulp-rigger": "^0.5.8",
+    "gulp-uglify": "^2.0.0"
+  }
+}

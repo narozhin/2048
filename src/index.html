@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta charset="utf-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>2048</title>
+        <style>
+        body {
+          margin: 0;
+          padding: 30px;
+          overflow: hidden;
+          box-sizing: border-box;
+          background-color: #272d37;
+        }
+        .dialog-wrapper {
+          display: table;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: #fff;
+          transition: 0.5s;
+        }
+        .dialog-wrapper > .dialog {
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+        }
+        .dialog-wrapper > .dialog > h1 {
+          text-transform: uppercase;
+        }
+        .dialog-wrapper > .dialog.success > h1 {
+          color: #4CAF50;
+        }
+        .dialog-wrapper > .dialog.error > h1 {
+          color: #F44336;
+        }
+        .hide {
+          display: none !important;
+        }
+        .btn-retry {
+          display: inline-block;
+          border: 2px solid #4CAF50;
+          color: #4CAF50;
+          text-transform: uppercase;
+          padding: 20px;
+        }
+        #bstatus {
+          position: fixed;
+          top: 0;
+          right: 0;
+          text-transform: uppercase;
+          padding: 5px;
+          color: #fff;
+          font-size: 24px;
+          font-weight: 600;
+        }
+    </style>
+    </head>
+    <body>
+      <div class="dialog-wrapper">
+        <div class="dialog">
+          <h1>2048</h1>
+          <div class="btn-retry">Поехали!</div>
+        </div>
+        <div class="dialog success hide">
+          <h1>Победа!</h1>
+          <div class="btn-retry">Еще раз!</div>
+        </div>
+        <div class="dialog error hide">
+          <h1>Потрачено</h1>
+          <div class="btn-retry">Еще раз!</div>
+        </div>
+      </div>
+      <div id="bstatus"></div>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
